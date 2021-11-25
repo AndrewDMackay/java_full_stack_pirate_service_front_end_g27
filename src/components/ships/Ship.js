@@ -1,4 +1,7 @@
+
+
 import React  from 'react';
+
 
 const Ship = ({ship}) => {
 
@@ -12,3 +15,4 @@ const Ship = ({ship}) => {
 	}
 
 export default Ship;
+

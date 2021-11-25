@@ -1,7 +1,9 @@
+
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import NavBar from '../components/NavBar.js';
 import PirateContainer from './PirateContainer';
+
 
 const MainContainer = () => {
 
@@ -17,4 +19,6 @@ const MainContainer = () => {
     )
 }
 
+
 export default MainContainer;
+

@@ -1,4 +1,6 @@
+
 import React  from 'react';
+
 
 const Raid = ({raid}) => {
   
@@ -12,4 +14,6 @@ const Raid = ({raid}) => {
   )
 }
 
+
 export default Raid;
+

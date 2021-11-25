@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Pirate from './Pirate.js';
 
@@ -24,4 +25,7 @@ const PirateList = ({pirates}) => {
 	  </ul>
 	)
 }
+
+
  export default PirateList;
+

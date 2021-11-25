@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Ship from './Ship.js';
 
@@ -17,4 +18,7 @@ const ShipList = ({ships}) => {
 
 	)
 }
+
+
  export default ShipList;
+
