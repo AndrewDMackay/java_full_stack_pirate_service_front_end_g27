@@ -55,6 +55,14 @@ const PirateContainer = () => {
 }
 
 
+  const handleUpdate = function(pirate){
+    const request = new Request();
+    request.patch('/api/pirates/' + pirate.id, pirate)
+    .then(() => {
+      window.location = '/pirates/' + pirate.id
+    })
+  }
+
   if(!pirates){
     return null
   }
@@ -67,6 +75,14 @@ const PirateContainer = () => {
       <Route exact path = "/pirates/new" render = {() => {
         return <PirateForm ships = {ships} onCreate = {handlePost}/>
       }}/>
+
+
+      <Route exact path = '/pirates/:id/edit' render={(props) => {
+        const id = props.match.params.id;
+        const pirate = findPirateById(id)
+        return <PirateForm pirate={pirate} ships={ships} onUpdate={handleUpdate}/>
+      }}/> 
+
 
       <Route exact path="/pirates/:id" render={(props) =>{
         const id = props.match.params.id;

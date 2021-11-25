@@ -1,5 +1,6 @@
 import React from 'react';
 import Pirate from "./Pirate";
+import {Link} from 'react-router-dom';
 
 const PirateDetail = ({pirate, onDelete}) => {
 
@@ -7,16 +8,17 @@ const PirateDetail = ({pirate, onDelete}) => {
       return <p>Loading...</p>
     }
 
+    const editUrl = "/pirates/" + pirate.id + "/edit";
 
-  const handleDelete = () => {
-    onDelete(pirate.id)
-  }
+    const handleDelete = () => {
+      onDelete(pirate.id)
+    }
 
-  const piratesRaids = pirate.raids.map((raid, index) => {
-    return <li key={index}>
-    {raid.location}
-    </li>
-  })
+    const piratesRaids = pirate.raids.map((raid, index) => {
+      return <li key={index}>
+      {raid.location}
+      </li>
+    })
 
 
     return (
@@ -27,6 +29,7 @@ const PirateDetail = ({pirate, onDelete}) => {
       {piratesRaids}
       </ul>
       <button onClick={handleDelete}>Delete {pirate.firstName}</button>
+      <Link to = {editUrl}><button type="button">Edit</button></Link>
       </div>
     )
   }
